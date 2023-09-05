@@ -7,8 +7,9 @@ import { AndDesignVueResolve, createStyleImportPlugin } from 'vite-plugin-style-
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  // 开发服务器
   server: {
-    proxy: {
+    proxy: { // 代理配置
       "/api": {
         target: "http://localhost:3002",
         changeOrigin: true,
@@ -20,8 +21,9 @@ export default defineConfig({
       }
     },
   },
+  // 插件列表
   plugins: [
-    vue(),
+    vue(), // 支持Vue
     AutoImport({
       dts: './src/types/auto-imports.d.ts',
       imports: [

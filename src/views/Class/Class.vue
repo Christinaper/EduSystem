@@ -22,7 +22,7 @@ const columns = [
   { title: "班级专业", dataIndex: "cls_dic_id_major", slots: { customRender: 'cls_dic_id_major' } },
   { title: "教学老师", dataIndex: "cls_stf_id_teacher", slots: { customRender: 'id_teacher' } },
   { title: "教务老师", dataIndex: "cls_stf_id_admin", slots: { customRender: 'id_admin' } },
-  { title: "就业老师", dataIndex: "cls_stf_id_job", slots: { customRender: 'id_job' } },
+  { title: "教学秘书", dataIndex: "cls_stf_id_job", slots: { customRender: 'id_job' } },
   { title: "教室", dataIndex: "cls_clsr_id", slots: { customRender: 'clsr_id' }  },
   { title: "开课时间", dataIndex: "cls_begin" },
   { title: "结课时间", dataIndex: "cls_end" },
@@ -237,7 +237,7 @@ const handlePageChange = (pageNum: number) => {
           </a-select-option>
         </a-select>
       </a-form-item>
-      <a-form-item label="就业老师：" name="cls_stf_id_job">
+      <a-form-item label="教学秘书：" name="cls_stf_id_job">
         <a-select allowClear v-if="allClasses" v-model:value="edit.model.cls_stf_id_job" placeholder="请选择">
           <a-select-option v-for="item in staffList.filter(stf => stf.stf_category === 6)" :key="item.stf_id" :value="item.stf_id" :disabled="!item.stf_invalid">
             {{ item.stf_name }}

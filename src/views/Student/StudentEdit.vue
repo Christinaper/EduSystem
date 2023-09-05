@@ -106,10 +106,10 @@ const saveEditHandler = async () => {
           </a-select-option>
         </a-select>
       </a-form-item>
-      <a-form-item label="在读/毕业院校" name="stu_school">
+      <a-form-item label="学院" name="stu_school">
         <a-input v-model:value.trim="edit.model.stu_school"></a-input>
       </a-form-item>
-      <a-form-item label="在校学习专业" name="stu_major">
+      <a-form-item label="专业" name="stu_major">
         <a-input v-model:value.trim="edit.model.stu_major"></a-input>
       </a-form-item>
       <a-form-item label="家庭住址" name="stu_address">
